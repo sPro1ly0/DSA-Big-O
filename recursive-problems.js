@@ -1,3 +1,5 @@
+// 11. Tower of Hanoi
+
 // Implement your algorithm using recursion. Your program should display each movement of the disk from one rod to another.
 
 // If you are given 5 disks, how do the rods look like after 7 recursive calls?
@@ -44,6 +46,7 @@ const countingSheep = function (numberOfSheep) {
 // countingSheep(3);
 // This is a linear time O. The number of operations is proportional to the input number.
 
+
 // 2. Power Calculator
 
 const powerCalculator = function (base, exponent) {
@@ -61,6 +64,7 @@ const powerCalculator = function (base, exponent) {
 // console.log(powerCalculator(10, 2));
 
 // This is a constant time O. It takes the same amount of time to calculate any power of any number.
+
 
 // 3. Reverse String
 
@@ -80,6 +84,7 @@ const reverseString = function (str) {
 // console.log(reverseString('Hello World'));
 
 // This is a linear time O. The running time is proportional to the string length.
+
 
 // 4. nth Triangular Number
 
@@ -124,6 +129,7 @@ const stringSplitter = function (str) {
 
 // This is a linear time O. The running time is proportional to the string length.
 
+
 // 6. Fibonacci
 let fibonacci = function (num) {
     let result = [];
@@ -145,6 +151,7 @@ let fibonacci = function (num) {
 // console.log(fibonacci(7));
 
 // This is a linear time O. The number of operations is proportional to the input number.
+
 
 // 7. Factorial
 
