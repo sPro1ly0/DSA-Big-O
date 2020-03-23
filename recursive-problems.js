@@ -42,7 +42,7 @@ const countingSheep = function (numberOfSheep) {
     
 };
 // countingSheep(3);
-
+// This is a linear time O. The number of operations is proportional to the input number.
 
 // 2. Power Calculator
 
@@ -60,6 +60,7 @@ const powerCalculator = function (base, exponent) {
 
 // console.log(powerCalculator(10, 2));
 
+// This is a constant time O. It takes the same amount of time to calculate any power of any number.
 
 // 3. Reverse String
 
@@ -78,6 +79,7 @@ const reverseString = function (str) {
 
 // console.log(reverseString('Hello World'));
 
+// This is a linear time O. The running time is proportional to the string length.
 
 // 4. nth Triangular Number
 
@@ -96,6 +98,8 @@ const triangle = function (num) {
 }
 
 // console.log(triangle(4));
+
+// This is a linear time O. The number of operations is proportional to the input number.
 
 
 // 5. String Splitter Don't use .split().
@@ -118,6 +122,7 @@ const stringSplitter = function (str) {
 
 // console.log(stringSplitter('02/20/2020'));
 
+// This is a linear time O. The running time is proportional to the string length.
 
 // 6. Fibonacci
 let fibonacci = function (num) {
@@ -139,6 +144,7 @@ let fibonacci = function (num) {
 
 // console.log(fibonacci(7));
 
+// This is a linear time O. The number of operations is proportional to the input number.
 
 // 7. Factorial
 
@@ -157,3 +163,5 @@ const factorial = function (num) {
 }
 
 console.log(factorial(5));
+
+// This is a linear time O. The number of operations is proportional to the input number.

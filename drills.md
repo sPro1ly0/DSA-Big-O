@@ -191,13 +191,213 @@ After 7 recursive calls, only 2 moves were figured out. The top disk is moved to
 
 Exponential time O(2^n). The amount of moves increases very quickly with increasing number of disks. Many recursive calls and operations are required to complete the alogrithm.
 
-## 12. Iterative version
+## 12. Iterative version & 14. Big O
 ### Solve the drills 1 - 7 from your previous checkpoint (Recursion) iteratively.
+### Take your solutions from the iterative exercises today and identify the time complexities (big O) of each of them.
 
 https://github.com/sPro1ly0/DSA-Big-O/blob/master/recursive-problems.js
 
 ## 13. Recursive Big O
 ### Take your solutions from the recursive exercises that you completed in the previous checkpoint and identify the time complexities (big O) of each of them.
 
-## 14. Iterative Big O
-### Take your solutions from the iterative exercises today and identify the time complexities (big O) of each of them.
+1. Counting Sheep
+
+<pre><code>
+const countingSheep = function(numberOfSheep) {
+    // Base case
+    if (numberOfSheep === 0) {
+        return console.log('All sheep jumped over the fence');
+    }
+    // recursive case
+    
+    console.log(`${numberOfSheep}: Another sheep jumps over the fence`);
+    countingSheep(numberOfSheep - 1);
+    
+};
+</code></pre>
+
+
+2. Power Calculator
+
+<pre><code>
+const powerCalculator = function(base, exponent) {
+
+    if (exponent < 0) {
+        return 'exponent should be >= 0';
+    } else if (exponent === 0 ) {
+        return 1;
+    } else {
+        return base * powerCalculator(base, exponent - 1);
+    }
+
+}
+</code></pre>
+
+3. Reverse String
+
+<pre><code>
+const reverseString = function(str) {
+    let shortenStr = str.slice(0, str.length - 1)
+
+    if (str.length === 0) {
+        return "";
+    }
+
+
+    return str.charAt(str.length - 1) + reverseString(shortenStr);
+}
+</code></pre>
+
+4. nth Triangular Number
+
+<pre><code>
+const triangle = function(num) {
+    if (num <= 0) {
+        return 0;
+    }
+
+    return num + triangle(num - 1);
+}
+</code></pre>
+
+5. String Splitter
+
+<pre><code>
+const stringSplitter = function(str) {
+    let slash = str.search('/');
+    let splitOutSlash = str.slice(0, slash);
+
+    if (slash == -1) {
+        splitOutSlash = str;
+        return [ splitOutSlash ];
+    }
+
+    return [ splitOutSlash, ...stringSplitter(str.slice(slash + 1)) ];
+}
+
+// console.log(stringSplitter('02/20/2020'));
+</code></pre>
+
+6. Fibonacci
+
+<pre><code>
+let fibonacci = function(num) {
+    
+    if (num === 1) {
+        return [0, 1];
+    } else {
+        let arr = fibonacci(num - 1);
+        arr.push(arr[arr.length - 1] + arr[arr.length - 2]);
+        return arr;
+    }
+
+}
+</code></pre>
+
+7. Factorial
+
+<pre><code>
+const factorial = function(num) {
+
+    if (num === 0) {
+        return 1;
+    } else if (Math.sign(num) === -1) { // for negative numbers
+        return num * factorial(num + 1);
+    } else if (Math.sign(num) === 1) { // for positive numbers
+        return num * factorial(num - 1);
+    }
+}
+</code></pre>
+
+// DID NOT SOLVE MAZE PROBLEM
+
+<pre><code>
+const solveMaze = function(maze) {
+
+    const m = maze;
+
+    const move = function(row, column) {
+        
+        if(m[row][column] == 2) {
+            console.log("We solved the maze at (" + column + ", " + row + ")");
+        } else if(m[row][column] == 1) {
+            console.log("At valid position (" + column + ", " + row + ")");
+            m[row][column] = 9;
+            if(column < m.length - 1) {  // right
+              console.log('R')
+                move(column + 1, row);
+            }
+            if(row < m[column].length - 1) {  //down
+              console.log('D')
+                move(column, row + 1);
+            }
+            if(column > 0) {  // left
+              console.log('L')
+                move(column - 1, row);
+            }
+            if(row > 0) {  // up
+              console.log('U')
+                move(column, row - 1);
+            }
+        }
+    }
+}
+</code></pre>
+
+
+// 10. Anagrams
+
+<pre><code>
+const anagrams = function(prefix, word) {
+
+    if (word.length <= 1) {
+        console.log(prefix + word);
+    } else {
+        for (let i = 0; i < word.length; i++) {
+            const nextLetter = word.substring(i, i + 1);
+            const before = word.substring(0, i);
+            const after = word.substring(i + 1);
+            anagrams(prefix + nextLetter, before + after);
+        }
+    }
+
+}
+
+// anagrams('', 'east');
+</code></pre>
+
+11. Organization Chart
+
+<pre><code>
+const organizationChart = function(org, boss) {
+
+    let hierarchy = {};
+    
+    org
+        .filter(person => person.boss === boss)
+        .forEach(person => hierarchy[person.name] = organizationChart(org, person.name))
+
+    return hierarchy;
+}
+
+// console.log(organizationChart(group, null));
+</code></pre>
+
+12. Binary Representation
+
+<pre><code>
+function binaryRep(num) {
+    if (num === 0) {
+        return '0';
+    }
+    const divideNum = Math.floor(num / 2);
+    const remainder = num % 2;
+    if (divideNum === 0) {
+        return `${remainder}`;
+    }
+    return binaryRep(divideNum) + remainder.toString();
+  };
+  
+// console.log(binaryRep(3));
+// console.log(binaryRep(25));
+</code></pre>
