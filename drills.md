@@ -188,4 +188,13 @@ After 7 recursive calls, only 2 moves were figured out. The top disk is moved to
 
 #### What is the runtime of your algorithm?
 
-Exponential time O(2^n). The amount of moves increases very quickly with increasing number of disks. Many recursive calls and operations are required to complete the alogrithm. 
+Exponential time O(2^n). The amount of moves increases very quickly with increasing number of disks. Many recursive calls and operations are required to complete the alogrithm.
+
+## 12. Iterative version
+### Solve the drills 1 - 7 from your previous checkpoint (Recursion) iteratively.
+
+## 13. Recursive Big O
+### Take your solutions from the recursive exercises that you completed in the previous checkpoint and identify the time complexities (big O) of each of them.
+
+## 14. Iterative Big O
+### Take your solutions from the iterative exercises today and identify the time complexities (big O) of each of them.
