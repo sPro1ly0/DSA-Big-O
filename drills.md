@@ -140,3 +140,43 @@ The algorithm push numbers into an array that gets returned. A sequence is being
 }</code></pre>
 
 I think this is a logarithmic time O(log(n)). The run will increase with big inputs but slowly because the problem gets smaller. The currentIndex will increase the minIndex or decrease the maxIndex which focuses on a smaller section of the array.
+
+## 9. Random element
+### What is the Big O of the following algorithm? Explain your answer
+
+<pre><code>
+function findRandomElement(arr) {
+    return arr[Math.floor(Math.random() * arr.length)];
+}
+</code></pre>
+
+The Big O here is a Constant time O(1). The algorithm will generate a random index number based on any array input length and use it to return one value at that index. The same process is happening for any array.
+
+## 10. What Am I?
+### What does the following algorithm do? What is the Big O of the following algorithm? Explain your answer
+
+<pre><code>
+function isWhat(n) {
+    if (n < 2 || n % 1 != 0) {
+        return false;
+    }
+    for (let i = 2; i < n; ++i) {
+        if (n % i == 0) return false;
+    }
+    return true;
+}
+</code></pre>
+
+This alogrithm is trying to help find prime numbers which would leave some remainder and not a remainder of zero here. Prime numbers are only divisible by 1 and themseleves. If the for loop let i = 1 then all the prime numbers would return false, so the for loop started i = 2 to avoid this from happening.
+
+The Big O is constant or linear time. The first 'if' statement deals with numbers less than 2 which return false right away, or if the number was 2 then it would return true right away(constant). The linear time in the 'for' statement will vary on the number values greater than 2. If the number is a prime number, then the for loop will go through each number from 2 to the prime number which would result in operations being proportional to the number. Other numbers than prime numbers would be shorter in time because the remainder could be equal to 0 earlier.
+
+## 11. Tower of Hanoi
+### Derive an algorithm to solve the Tower of Hanoi puzzle.
+Implement your algorithm using recursion. Your program should display each movement of the disk from one rod to another.
+
+If you are given 5 disks, how do the rods look like after 7 recursive calls?
+
+How many moves are needed to complete the puzzle with 3 disks? with 4 disks? with 5 disks?
+
+What is the runtime of your algorithm?
