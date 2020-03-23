@@ -176,7 +176,8 @@ The Big O is constant or linear time. The first 'if' statement deals with number
 ## 11. Tower of Hanoi
 ### Derive an algorithm to solve the Tower of Hanoi puzzle.
 #### Implement your algorithm using recursion. Your program should display each movement of the disk from one rod to another.
-Alogrithm is in recursive-problems.js.
+Alogrithm is in recursive-problems.js. 
+https://github.com/sPro1ly0/DSA-Big-O/blob/master/recursive-problems.js
 
 #### If you are given 5 disks, how do the rods look like after 7 recursive calls?
 
@@ -192,6 +193,8 @@ Exponential time O(2^n). The amount of moves increases very quickly with increas
 
 ## 12. Iterative version
 ### Solve the drills 1 - 7 from your previous checkpoint (Recursion) iteratively.
+
+https://github.com/sPro1ly0/DSA-Big-O/blob/master/recursive-problems.js
 
 ## 13. Recursive Big O
 ### Take your solutions from the recursive exercises that you completed in the previous checkpoint and identify the time complexities (big O) of each of them.
