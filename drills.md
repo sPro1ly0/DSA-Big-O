@@ -34,7 +34,7 @@ Linear time complexities have running times directly proportional to the size of
     }
 }</code></pre>
 
-This algorithm is Constant time O(n). You enter one value and return one value after you determine it is even or not. The same amount of time will be taken for each input.
+This algorithm is Constant time O(1). You enter one value and return one value after you determine it is even or not. The same amount of time will be taken for each input.
 
 ## 3. Are you here?
 ### What is the Big O of the following algorithm? Explain your answer
@@ -169,7 +169,7 @@ function isWhat(n) {
 }
 </code></pre>
 
-This alogrithm is trying to help find prime numbers which would leave some remainder and not a remainder of zero here. Prime numbers are only divisible by 1 and themseleves. If the for loop let i = 1 then all the prime numbers would return false, so the for loop started i = 2 to avoid this from happening.
+This alogrithm is trying to find prime numbers which would leave some remainder and not a remainder of zero here. Prime numbers are only divisible by 1 and themseleves. If the for loop let i = 1 then all the prime numbers would return false, so the for loop started i = 2 to avoid this from happening.
 
 The Big O is constant or linear time. The first 'if' statement deals with numbers less than 2 which return false right away, or if the number was 2 then it would return true right away(constant). The linear time in the 'for' statement will vary on the number values greater than 2. If the number is a prime number, then the for loop will go through each number from 2 to the prime number which would result in operations being proportional to the number. Other numbers than prime numbers would be shorter in time because the remainder could be equal to 0 earlier.
 
@@ -200,7 +200,7 @@ https://github.com/sPro1ly0/DSA-Big-O/blob/master/recursive-problems.js
 ## 13. Recursive Big O
 ### Take your solutions from the recursive exercises that you completed in the previous checkpoint and identify the time complexities (big O) of each of them.
 
-1. Counting Sheep
+1. Counting Sheep: This is a linear time O. The running time or number of operations is proportional to the input number.
 
 <pre><code>
 const countingSheep = function(numberOfSheep) {
@@ -217,7 +217,7 @@ const countingSheep = function(numberOfSheep) {
 </code></pre>
 
 
-2. Power Calculator
+2. Power Calculator: This is a linear time O. The running time or number of operations is proportional to the input exponent.
 
 <pre><code>
 const powerCalculator = function(base, exponent) {
@@ -233,7 +233,7 @@ const powerCalculator = function(base, exponent) {
 }
 </code></pre>
 
-3. Reverse String
+3. Reverse String: This is a linear time O. The running time is proportional to the input string.
 
 <pre><code>
 const reverseString = function(str) {
@@ -248,7 +248,7 @@ const reverseString = function(str) {
 }
 </code></pre>
 
-4. nth Triangular Number
+4. nth Triangular Number: This is a linear time O. The running time is proportional to the input number.
 
 <pre><code>
 const triangle = function(num) {
@@ -260,7 +260,7 @@ const triangle = function(num) {
 }
 </code></pre>
 
-5. String Splitter
+5. String Splitter: This is a linear time O. The running time is proportional to the input.
 
 <pre><code>
 const stringSplitter = function(str) {
@@ -278,7 +278,7 @@ const stringSplitter = function(str) {
 // console.log(stringSplitter('02/20/2020'));
 </code></pre>
 
-6. Fibonacci
+6. Fibonacci: This is a linear time O. The running time is proportional to the input number.
 
 <pre><code>
 let fibonacci = function(num) {
@@ -294,7 +294,7 @@ let fibonacci = function(num) {
 }
 </code></pre>
 
-7. Factorial
+7. Factorial: This is a linear time O. The running time is proportional to the input number.
 
 <pre><code>
 const factorial = function(num) {
@@ -345,7 +345,7 @@ const solveMaze = function(maze) {
 </code></pre>
 
 
-// 10. Anagrams
+// 10. Anagrams: This is a linear time O. The running time is proportional to the input.
 
 <pre><code>
 const anagrams = function(prefix, word) {
@@ -366,7 +366,7 @@ const anagrams = function(prefix, word) {
 // anagrams('', 'east');
 </code></pre>
 
-11. Organization Chart
+11. Organization Chart: This is a polynomial time O. The running time will grow quickly with the filter and forEach methods used on the inputs.
 
 <pre><code>
 const organizationChart = function(org, boss) {
@@ -383,7 +383,7 @@ const organizationChart = function(org, boss) {
 // console.log(organizationChart(group, null));
 </code></pre>
 
-12. Binary Representation
+12. Binary Representation: This is a linear time O. The running time is proportional to the input number.
 
 <pre><code>
 function binaryRep(num) {
